@@ -1,0 +1,47 @@
+* {
+	
+	font-family: 'Courier New', Courier, monospace;
+	
+}
+
+body {
+	background-color: #583cd9;
+}
+
+nav {
+	text-decoration: none;
+	display: inline;
+	text-align: center;
+	
+}
+
+nav ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333333;
+}
+
+nav ul li
+{
+	float: left;
+}
+
+nav ul a {
+	
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 16px;
+	text-decoration: none;
+}
+
+nav ul li:hover {
+	background-color: #111111;
+}
+nav #current
+{
+	text-decoration: underline;
+}
