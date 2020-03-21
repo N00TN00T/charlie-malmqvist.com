@@ -15,7 +15,7 @@ nav {
 	
 }
 
-nav .dropdown
+nav ul
 {
 	list-style-type: none;
 	margin: 0;
@@ -24,12 +24,12 @@ nav .dropdown
 	background-color: #333333;
 }
 
-nav .dropdown .navitem
+nav ul .navitem
 {
 	float: left;
 }
 
-nav .dropdown a {
+nav ul a {
 	
 	display: block;
 	color: white;
@@ -38,7 +38,7 @@ nav .dropdown a {
 	text-decoration: none;
 }
 
-nav .dropdown .navitem:hover {
+nav ul .navitem:hover {
 	background-color: #111111;
 }
 nav #current
