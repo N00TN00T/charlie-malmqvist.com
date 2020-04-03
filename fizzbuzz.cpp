@@ -103,7 +103,7 @@ int main()
 
     string classicResult = classicFizzBuzzer.DoFizzBuzz(100);
 
-    FizzBuzzer<3> newFizzBuzzer({ Word("Harf", 3), Word("Buzz", 5), Word("Fizz", 10) }, 23);
+    FizzBuzzer<3> newFizzBuzzer({ Word("Harf", 3), Word("Buzz", 5), Word("Fizz", 14) }, 23);
 
     string newResult = newFizzBuzzer.DoFizzBuzz(100);
 
