@@ -81,7 +81,7 @@ nav #current
 
 .video
 {
-	display: block;
+	display: inline-block;
 }
 
 /*.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
