@@ -16,3 +16,9 @@
     padding-top: 5%;
     padding-bottom: 5%;
 }
+
+.portfolio-content h1
+{
+    background-color: black;
+    color: white;
+}
