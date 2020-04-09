@@ -86,12 +86,12 @@ nav #current
 
  /* unvisited link */
  a:link {
-	color: green;
+	color: red;
   }
   
   /* visited link */
   a:visited {
-	color: green;
+	color: red;
   }
   
   /* mouse over link */
