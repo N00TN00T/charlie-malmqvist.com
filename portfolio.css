@@ -1,12 +1,12 @@
 .portfolio-section
 {
     
-    background-color: rgba(255, 255, 255, 0.39);
+    /*background-color: rgba(255, 255, 255, 0.39);*/
     padding: 3em;
 }
 
 .portfolio-content
 {
-    background-color: rgba(190, 49, 49, 0.301);
+    background-color: rgba(100, 100, 100, 0.1);
     padding: 1em;
 }
