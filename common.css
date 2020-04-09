@@ -79,4 +79,9 @@ nav #current
 
 .dropdown:hover .dropdown-content {display: block;}
 
+.video
+{
+	display: block;
+}
+
 /*.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
