@@ -84,4 +84,22 @@ nav #current
 	display: block;
 }
 
-/*.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
+ /* unvisited link */
+ a:link {
+	color: green;
+  }
+  
+  /* visited link */
+  a:visited {
+	color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+	color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+	color: blue;
+  } 
