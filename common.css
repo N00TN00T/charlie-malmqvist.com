@@ -5,22 +5,22 @@
 }
 
 /* unvisited link */
-.link a:link {
+ a:link.link {
 	color: red;
   }
   
   /* visited link */
-  .link  a:visited {
+  a:visited.link {
 	color: red;
   }
   
   /* mouse over link */
-  .link a:hover {
+  a:hover.link {
 	color: hotpink;
   }
   
   /* selected link */
-  .link a:active {
+  a:active.link {
 	color: blue;
   } 
 
