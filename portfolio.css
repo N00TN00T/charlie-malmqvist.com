@@ -6,6 +6,6 @@
 
 .portfolio-content
 {
-    
-    padding: 1em;
+    background-color: rgba(1.0, 1.0, 1.0, 0.3);
+    padding: 5em;
 }
