@@ -56,6 +56,33 @@
 				<div class="portfolio-content">
 					<h1 id="hobby-projects">Hobby Projects</h1>
 					<p>This is my hobby projects I've worked on through the years (at least the once I could still find)</p>
+					<div>
+						<h2>[2019 - present] Wizzy & Wizzy Editor</h2>
+						<p>This is the main project I'm working on right now, and probably the most impressive one in terms of software development. It divided into 2 subprojects:
+							an <a href="https://github.com/N00TN00T/Wizzy">Interactive Graphics Application Framework</a> and the <a href="https://github.com/N00TN00T/WizzyEditor">Editor</a> which I just call "Wizzy Editor". 
+							The framework has (as of april 2020):
+							<ul>
+								<li>VERY basic deferred 3D geometry renderer</li>
+								<li>Advanced, featureful & secure Resource Management system (that can bind resources and files, simulating an actual resource directory on the hard drive in real time)</li>
+								<li>Platform-abstracted rendering api (currently only with OpenGL 4.5 implementations):</li>
+								<ul>
+									<li>Textures (created from files via Resource Management)</li>
+									<li>Shaders (created from files via Resource Management)</li>
+									<li>Render Targets (created from files via Resource Management)</li>
+									<li>2D Batch Renderer</li>
+									<li>Clean Wizzy API for using current graphics API without the need of any native code</li>
+								</ul>
+								<li>Custom serialization language</li>
+								<li>Windows support & high potential for linux support (I don't have my linux machine anymore so I haven't been able to test the linux build in a while)</li>
+								<li>Runtime lua scripting with Wizzy's own high level wrapper for Script Contexts</li>
+								<li>A PropertyTable that can be converted to lua table in the script context and vice versa. This table is what is serialized into the custom serialization language</li>
+								<li>Very effective event system</li>
+								<li>Input polling</li>
+								<li>Pure data-oriented ECS system which uses the event system for ecs Systems to process data</li>
+							</ul>
+						</p>
+						<p>It can be found here: https://github.com/N00TN00T/Wizzy</p>
+					</div>
 					<p>*Content coming soon for hobby projects*</p>
 				</div>
 			</div>
