@@ -22,6 +22,11 @@
     background-color: black;
 }
 
+.portfolio-content p
+{
+    padding-right: 30%;
+}
+
 .portfolio-content
 {
     color: rgba(200, 200, 200, 1.0);
