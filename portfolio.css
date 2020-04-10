@@ -15,12 +15,12 @@
     padding-right: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
-    margin:auto;
 }
 
 .portfolio-content h1
 {
     background-color: black;
+    padding-left: 2%;
 }
 
 .portfolio-content p
