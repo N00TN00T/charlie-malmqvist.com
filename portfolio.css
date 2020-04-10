@@ -35,12 +35,18 @@
 
 .toc-section
 {
-    padding: 1%;
+    padding: 1% 70% 1% 1%;
     background-color: rgb(200, 200, 200);
+    align-self: center;
+    align-content: center;
 }
 
 .toc-item
 {
-    padding-top: 5%;
+    padding-top: 1%;
+}
+
+.toc-item a
+{
     text-decoration: none;
 }
