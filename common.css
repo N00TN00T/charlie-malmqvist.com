@@ -6,12 +6,12 @@
 
 /* unvisited link */
  a:link.link {
-	color: red;
+	color: rgba(150, 30, 50);
   }
   
   /* visited link */
   a:visited.link {
-	color: red;
+	color: rgba(150, 30, 50);
   }
   
   /* mouse over link */
