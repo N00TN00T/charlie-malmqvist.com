@@ -6,12 +6,12 @@
 
 /* unvisited link */
  a:link.link {
-	color: rgb(70, 150, 100);
+	color: rgb(50, 190, 70);
   }
   
   /* visited link */
   a:visited.link {
-	color: rgb(70, 150, 100);
+	color: rgb(50, 190, 70);
   }
   
   /* mouse over link */
