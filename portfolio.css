@@ -35,7 +35,8 @@
 
 .toc-section
 {
-    padding: 1% 70% 1% 1%;
+    width: 30%;
+    padding: 1% 1% 1% 1%;
     background-color: rgb(200, 200, 200);
     align-self: center;
     align-content: center;
@@ -43,7 +44,7 @@
 
 .toc-item
 {
-    padding-top: 1%;
+    padding-top: 2%;
 }
 
 .toc-item a
