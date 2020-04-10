@@ -38,8 +38,7 @@
     width: 30%;
     padding: 1% 1% 1% 1%;
     background-color: rgb(200, 200, 200);
-    align-self: center;
-    align-content: center;
+    margin: auto;
 }
 
 .toc-item
