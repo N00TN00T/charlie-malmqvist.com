@@ -135,6 +135,10 @@ nav .navitem:hover {
 
 	width: 50%;
 }
+.article-item iframe
+{
+	height: auto;
+}
 
 .article-item p
 {
