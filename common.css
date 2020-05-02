@@ -160,6 +160,7 @@ nav #current
 .article-item ul, .article-item li
 {
 	text-decoration: unset;
+	display: inline-block;
 }
 
 .article-content h1
