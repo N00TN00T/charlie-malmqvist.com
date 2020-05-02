@@ -127,6 +127,11 @@ nav #current
 	margin: 0 auto;
 }
 
+.article-content p img
+{
+	margin: 0 auto;
+}
+
 .article-content h1
 {
     background-color: black;
