@@ -127,6 +127,11 @@ nav #current
 	margin: 0 auto;
 }
 
+.article-content img
+{
+	text-align: center;
+}
+
 .article-content h1
 {
     background-color: black;
