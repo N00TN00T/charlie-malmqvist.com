@@ -136,7 +136,7 @@ nav #current
 	
 }
 
-.article-item
+.article-item, .article-item img
 {
 	margin: 0 auto;
 	display: block;
