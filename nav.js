@@ -18,7 +18,7 @@ $(function(){
     $(".nav_top").load("nav.html"); 
 
     console.log(filenameraw);
-    document.getElementById(filenameraw).classList.add("nav-current");
+    document.getElementById("hi").classList.add("nav-current");
 });
 $(window).on('load', function()
 {
