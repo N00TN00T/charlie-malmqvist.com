@@ -14,11 +14,8 @@ var filename = segments[segments.length - 1];
 
 var filenameraw = filename.split('.')[0];
 
-$(document).on('load', function()
+$(window).on('load', function()
 {
-    
-
-
     console.log(filenameraw);
     document.getElementById(filenameraw).classList.add("nav-current");
 })
