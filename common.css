@@ -174,8 +174,13 @@ nav .navitem:hover {
 img:active {
     -webkit-transform:scale(2.0);
 	transform:scale(2.0);
+}
+
+img:hover
+{
 	cursor: pointer;
 }
+
 .toc-item
 {
     padding-top: 5%;
