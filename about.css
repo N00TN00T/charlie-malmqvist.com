@@ -1,5 +1,8 @@
-#resume
+.article-content .article-item #resume
 {
     display: block;
     margin: 0 auto;
+
+    width: 75%;
+    height: auto;
 }
