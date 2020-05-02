@@ -53,6 +53,11 @@ nav .navitem
 	float: left;
 }
 
+.nav-current
+{
+	background-color: green;
+}
+
 nav a {
 	
 	display: block;
