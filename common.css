@@ -48,7 +48,7 @@ body {
 
 nav {
 	text-decoration: none;
-	display: block;
+	display: inline-block;
 	text-align: center;
 	width: 50vw;
 	margin: auto;
