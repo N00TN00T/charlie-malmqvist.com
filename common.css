@@ -121,6 +121,7 @@ nav .navitem:hover {
 	font-size: 0.9em;
 	margin: auto;
 	display: block;
+	padding-top: 0.5%;
 }
 .article-item
 {
