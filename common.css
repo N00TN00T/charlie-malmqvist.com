@@ -172,8 +172,9 @@ nav .navitem:hover {
     color: rgb(150, 150, 150);
 }
 img:active {
-    -webkit-transform:scale(1.5);
-    transform:scale(1.5);
+    -webkit-transform:scale(2.0);
+	transform:scale(2.0);
+	cursor: pointer;
 }
 .toc-item
 {
