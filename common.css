@@ -128,7 +128,7 @@ nav #current
 	display: block;
 }
 
-*:not(img)
+.article-content p, .article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5
 {
 	width: 75%;
 	padding: 1%;
