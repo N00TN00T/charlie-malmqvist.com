@@ -12,4 +12,5 @@ var filename = segments[segments.length - 1];
 
 $(function(){ $(".nav_top").load("nav.html"); });
 
+console.log(filename)
 document.getElementById(filename).classList.add("nav-current");
