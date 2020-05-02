@@ -48,12 +48,12 @@ body {
 
 nav {
 	text-decoration: none;
-	display: block;
 	text-align: center;
-	width: auto;
-	margin: auto;
+	width: 90%;
 	background-color: #333333;
 	position: fixed;
+	left: 5%;
+	top: 2%;
 }
 nav .navitem
 {
