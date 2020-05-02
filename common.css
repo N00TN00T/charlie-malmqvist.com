@@ -1,21 +1,21 @@
 * {
 	font-family: 'Courier New', Courier, monospace;
-	font-size: 5mm;
+	font-size: 2vw;
 }
 
 h1
 {
-	font-size: 10mm;
+	font-size: 4vw;
 }
 
 h2
 {
-	font-size: 8mm;
+	font-size: 3.4vw;
 }
 
 h3
 {
-	font-size: 6mm;
+	font-size: 2.8vw;
 }
 
 /* unvisited link */
