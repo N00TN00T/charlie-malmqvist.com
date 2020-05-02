@@ -1,6 +1,6 @@
 * {
 	font-family: 'Courier New', Courier, monospace;
-	font-size: 3vh;
+	font-size: 100%;
 }
 
 h1
@@ -86,10 +86,10 @@ nav a {
 	display: block;
 	color: white;
 	text-align: center;
+	font-size: 1.2em;
 	padding: 1em;
 	text-decoration: none;
 	margin: auto;
-	font-size: 120%;
 }
 
 
