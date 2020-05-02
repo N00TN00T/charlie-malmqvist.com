@@ -19,4 +19,4 @@ $(document).load(function()
 
     console.log(filenameraw);
     document.getElementById(filenameraw).classList.add("nav-current");
-}
+})
