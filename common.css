@@ -147,8 +147,8 @@ nav #current
 
 .article-item *
 {
-	margin: 0 auto;
-	display: block;
+	/*margin: 0 auto;
+	display: block;*/
 }
 
 .article-item p
@@ -159,9 +159,7 @@ nav #current
 
 .article-item ul, .article-item li
 {
-	list-style: square outside;
-	display: unset;
-	margin: unset;
+	
 }
 
 .article-content h1
