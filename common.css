@@ -122,15 +122,9 @@ nav #current
 	
 }
 
-.article-content p
+.article-content *
 {
 	margin: 0 auto;
-}
-
-.article-content p img
-{
-	margin: 0 auto;
-	width: 50%;
 }
 
 .article-content h1
