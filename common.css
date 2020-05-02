@@ -125,11 +125,12 @@ nav #current
 .article-content *
 {
 	margin: 0 auto;
+	width: 50%;
 }
 
 .article-content img
 {
-	text-align: center;
+	display: block;
 }
 
 .article-content h1
@@ -138,11 +139,6 @@ nav #current
     padding-left: 2%;
     padding-top: 2%;
     padding-bottom: 2%;
-}
-
-.article-content p
-{
-    width: 50%;
 }
 
 .article-content
