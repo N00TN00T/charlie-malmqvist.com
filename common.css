@@ -53,10 +53,6 @@ nav .navitem
 	float: left;
 }
 
-.nav-current
-{
-	background-color: green;
-}
 
 nav a {
 	
@@ -67,11 +63,14 @@ nav a {
 	text-decoration: none;
 }
 
+
 nav .navitem:hover {
 	background-color: #111111;
 }
-nav #current
+
+.nav-current
 {
+	background-color: green;
 	text-decoration: underline;
 }
 
