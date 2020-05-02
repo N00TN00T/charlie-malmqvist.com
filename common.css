@@ -154,7 +154,12 @@ nav #current
 .article-item p
 {
 	padding-top: 3%;
-	padding-bottom: 3%;
+	padding-bottom: 2%;
+}
+
+.article-item ul, .article-item li
+{
+	text-decoration: unset;
 }
 
 .article-content h1
