@@ -21,25 +21,21 @@ h3
 /* unvisited link */
  a:link.link {
 	color: rgb(50, 190, 70);
-	display: inline;
   }
   
   /* visited link */
   a:visited.link {
 	color: rgb(50, 190, 70);
-	display: inline;
   }
   
   /* mouse over link */
   a:hover.link {
 	color: hotpink;
-	display: inline;
   }
   
   /* selected link */
   a:active.link {
 	color: blue;
-	display: inline;
   } 
 
 header
