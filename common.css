@@ -59,6 +59,7 @@ nav {
 	position: fixed;
 	left: 5%;
 	top: 1%;
+	border-radius: 0.1em;
 }
 nav .navitem
 {
