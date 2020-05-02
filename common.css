@@ -149,12 +149,12 @@ nav #current
 {
 	/*margin: 0 auto;
 	display: block;*/
-	padding-top: 3%;
+	
 }
 
 .article-item p
 {
-	
+	padding-top: 3%;
 }
 
 .article-item ul, .article-item li
