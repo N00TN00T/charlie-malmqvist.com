@@ -15,7 +15,30 @@
 	<header>
 		<nav class="nav_top"></nav>
 
-		<h1>This is where you will find blogs for project I am currently working on</h1>
+		<div class="article-container">
+			<div class="article-section">
+				<div class="article-content">
+					<h1>New Wizzy 2D Renderer</h1>
+					<p>
+						I was playing around with the 2D renderer and wanted to use different shaders on
+						different objects in the scene while also rendering them to different RenderTargets. 
+						The shader was set in Renderer2D::Begin(), while the RenderTarget was used as a handle to 
+						a batch in the renderer so it had to be passed in every Renderer2D function. Altough every 
+						combination of shader and rendertarget needs to be its own batch, the api can be improved to
+						make things easier. So, I decided to create a Pipeline struct that will keep track of its own batch
+						and lets the user customize it by setting its shader, rendertarget, viewmatrix etc. The final version ended
+						up looking like this:<br>
+						<img src="media/rendererpipeline_001.png"><br>
+						I decided to make it a subclass and friend of Renderer2D. This way I can hide things from the user,
+						like the vertexbuffer and vertexarray, but still exposing it to Renderer2D. This will make for a pretty
+						clean API where the type is Renderer2D::Pipeline, which will let me make a Renderer::Pipeline
+						type for when I'll implemented 3D rendering. Now, instead of taking in the shader in Renderer2D::Begin()
+						and the rendertarget in every Renderer2D function call, the API looks more like this:<br>
+						<img src="media/new_renderer_api_001.png"><br>
+					</p>
+				</div>
+			</div>
+		</div>
 	</header>
 
 	<body>
@@ -23,3 +46,14 @@
 	</body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
