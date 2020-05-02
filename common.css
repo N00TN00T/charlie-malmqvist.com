@@ -128,7 +128,7 @@ nav #current
 	display: block;
 }
 
-.article-content p, h1
+.article-content p, .article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5
 {
 	width: 50%;
 	padding: 1%;
