@@ -130,7 +130,7 @@ nav #current
 .article-content p img
 {
 	margin: 0 auto;
-	background-color: white;
+	width: 50%;
 }
 
 .article-content h1
