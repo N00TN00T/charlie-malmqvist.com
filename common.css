@@ -125,13 +125,12 @@ nav #current
 .article-content *
 {
 	margin: 0 auto;
-	width: 50%;
 	display: block;
 }
 
-.article-content img
+.article-content p
 {
-	
+	width: 50%;
 }
 
 .article-content h1
