@@ -142,13 +142,14 @@ nav #current
 	display: block;
 	text-align: left;
 	width: 75%;
-	padding: 1%;
+	
 }
 
 .article-item *
 {
 	margin: 0 auto;
 	display: block;
+	padding: 1%;
 }
 
 .article-content h1
