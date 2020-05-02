@@ -112,6 +112,11 @@ nav #current
     padding-right: 5%;
     padding-top: 2%;
 	padding-bottom: 2%;
+	
+}
+
+.article-section * 
+{
 	margin: auto;
 }
 
