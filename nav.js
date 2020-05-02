@@ -1,6 +1,6 @@
 $(function(){ $(".nav_top").load("nav.html"); });
 
-window.onload = function()
+$(document).load(function()
 {
     var segments = window.location.pathname.split('/');
     var toDelete = [];
