@@ -123,6 +123,8 @@ nav .navitem:hover {
 {
 	text-align: center;
 	font-size: 0.9em;
+	margin: auto;
+	display: block;
 }
 .article-item
 {
