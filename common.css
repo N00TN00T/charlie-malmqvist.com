@@ -3,24 +3,24 @@
 	
 }
 
-p
+p, a
 {
-	font-size: 10mm;
+	font-size: 5mm;
 }
 
 h1
 {
-	font-size: 20mm;
+	font-size: 10mm;
 }
 
 h2
 {
-	font-size: 16mm;
+	font-size: 8mm;
 }
 
 h3
 {
-	font-size: 12mm;
+	font-size: 6mm;
 }
 
 /* unvisited link */
