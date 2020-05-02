@@ -120,12 +120,20 @@ nav .navitem:hover {
 	
 }
 
-.article-item, .article-item img, .article-item iframe
+.article-item
 {
 	margin: 0 auto;
 	display: block;
 	text-align: left;
 	width: 75%;	
+}
+
+.article-item .article-item img, .article-item iframe
+{
+	margin: auto;
+	display: block;
+
+	height: 10vh;
 }
 
 .article-item p
