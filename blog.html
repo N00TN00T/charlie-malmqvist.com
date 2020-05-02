@@ -37,8 +37,24 @@
 						and the rendertarget in every Renderer2D function call, the API looks more like this:</p>
 						<img src="media/new_renderer_api_001.png"><br>
 						<p>
-							aaa
+							Here's what the code would look like to load a texture and render it to the screen:
 						</p>
+						<img src="media/renderer_api_001.png"><br>
+						<p>
+							But if we wanted to render this texture with a custom shader and/or to a specific rendertarget,
+							we would only need to add a couple of lines to load the shader, create the rendertarget and assign
+							them to the pipeline:
+						</p>
+						<img src="media/renderer_api_advanced_001.png"><br>
+						<p>
+							And while I was at reworking the renderer API, I also made a change I've been planning on doing for a while which was to
+							allocated the batch buffer in the RAM and upload it to the vertex buffer instead of mapping it from the
+							GPU to the RAM and then uploading it again. (Under the hood - use glSubBufferData instead of glMapBuffer).
+							So with all these new changes I made a stress test for the renderer and managed to to render 100k quads at 60fps.
+							<br>I also fixed the font rendering which works way better with the new API. Here's the result:
+						</p>
+						<iframe src="https://www.youtube.com/embed/w3gj0DWNbsI" width="640" height="480"></iframe><br>
+						
 				</div>
 			</div>
 		</div>
