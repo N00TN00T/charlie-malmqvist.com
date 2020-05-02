@@ -14,7 +14,7 @@ var filename = segments[segments.length - 1];
 
 var filenameraw = filename.split('.')[0];
 
-$(document).load(function()
+$(document).on('load', function()
 {
     
 
