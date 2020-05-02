@@ -1,4 +1,3 @@
-$(function(){ $(".nav_top").load("nav.html"); });
 
 var segments = window.location.pathname.split('/');
 var toDelete = [];
@@ -14,8 +13,14 @@ var filename = segments[segments.length - 1];
 
 var filenameraw = filename.split('.')[0];
 
-$(window).on('load', function()
-{
+$(function(){ 
+    console.log("hi")
+    $(".nav_top").load("nav.html"); 
+
     console.log(filenameraw);
     document.getElementById(filenameraw).classList.add("nav-current");
+});
+$(window).on('load', function()
+{
+    
 })
