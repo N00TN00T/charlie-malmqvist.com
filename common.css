@@ -114,14 +114,14 @@ nav #current
     padding-bottom: 2%;
 }
 
-.article-content
+.article-content *
 {
     background-color: rgba(0, 0, 0, 0.3);
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 5%;
 	padding-bottom: 5%;
-	margin:auto;
+	margin: auto;
 }
 
 .article-content h1
