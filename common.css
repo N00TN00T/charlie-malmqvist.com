@@ -136,13 +136,18 @@ nav #current
 	
 }
 
-.article-item, .article-item img
+.article-item
 {
 	margin: 0 auto;
 	display: block;
 	text-align: left;
 	width: 75%;
 	padding: 1%;
+}
+
+.article-item *
+{
+	display: block;
 }
 
 .article-content h1
