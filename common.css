@@ -147,6 +147,7 @@ nav #current
 
 .article-item *
 {
+	margin: 0 auto;
 	display: block;
 }
 
