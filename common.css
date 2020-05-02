@@ -160,6 +160,8 @@ nav #current
 .article-item ul, .article-item li
 {
 	list-style: square outside;
+	display: unset;
+	margin: unset;
 }
 
 .article-content h1
