@@ -126,11 +126,12 @@ nav #current
 {
 	margin: 0 auto;
 	width: 50%;
+	display: block;
 }
 
 .article-content img
 {
-	display: block;
+	
 }
 
 .article-content h1
