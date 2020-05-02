@@ -60,7 +60,7 @@ nav .navitem
 	padding: 0;
 	overflow: hidden;
 	background-color: #333333;
-	float: right;
+	display: inline-block;
 }
 nav .nav-current
 {
