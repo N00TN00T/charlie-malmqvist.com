@@ -5,12 +5,12 @@
 
 h1
 {
-	font-size: 2vw;
+	font-size: 1.8vw;
 }
 
 h2
 {
-	font-size: 1.6vw;
+	font-size: 1.5vw;
 }
 
 h3
@@ -48,7 +48,7 @@ body {
 
 nav {
 	text-decoration: none;
-	display: inline;
+	display: block;
 	text-align: center;
 	
 }
