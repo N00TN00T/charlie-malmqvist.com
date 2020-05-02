@@ -38,7 +38,11 @@ nav {
 	text-align: center;
 	
 }
-
+.nav-current
+{
+	background-color: green;
+	text-decoration: underline;
+}
 nav .navitem
 {
 	list-style-type: none;
@@ -68,11 +72,7 @@ nav .navitem:hover {
 	background-color: #111111;
 }
 
-.nav-current
-{
-	background-color: green;
-	text-decoration: underline;
-}
+
 
 .dropbtn {
 	background-color: #4CAF50;
