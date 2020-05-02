@@ -128,22 +128,21 @@ nav #current
 
 .article-content *
 {
-	margin: 0 auto;
-	display: block;
-	text-align: left;
+	
 }
 
 .article-content p, .article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5
 {
-	width: 75%;
-	padding: 1%;
+	
 }
 
-.article-content ul, .article-content li
+.article-item
 {
-	padding: 0%;
+	margin: 0 auto;
+	display: block;
+	text-align: left;
 	width: 75%;
-	text-decoration: unset;
+	padding: 1%;
 }
 
 .article-content h1

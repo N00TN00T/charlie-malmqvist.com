@@ -19,45 +19,46 @@
 			<div class="article-section">
 				<div class="article-content">
 					<h1>New Wizzy 2D Renderer</h1>
-					<p>
-						I was playing around with the 2D renderer and wanted to use different shaders on
-						different objects in the scene while also rendering them to different RenderTargets. 
-						The shader was set in Renderer2D::Begin(), while the RenderTarget was used as a handle to 
-						a batch in the renderer so it had to be passed in every Renderer2D function. Altough every 
-						combination of shader and rendertarget needs to be its own batch, the api can be improved to
-						make things easier. So, I decided to create a Pipeline struct that will keep track of its own batch
-						and lets the user customize it by setting its shader, rendertarget, viewmatrix etc. The final version ended
-						up looking like this:</p>
-						<img src="media/rendererpipeline_001.png"><br>
+					<div class="article-item">
 						<p>
-						I decided to make it a subclass and friend of Renderer2D. This way I can hide things from the user,
-						like the vertexbuffer and vertexarray, but still exposing it to Renderer2D. This will make for a pretty
-						clean API where the type is Renderer2D::Pipeline, which will let me make a Renderer::Pipeline
-						type for when I'll implemented 3D rendering. Now, instead of taking in the shader in Renderer2D::Begin()
-						and the rendertarget in every Renderer2D function call, the API looks more like this:</p>
-						<img src="media/new_renderer_api_001.png"><br>
-						<p>
-							Here's what the code would look like to load a texture and render it to the screen:
-						</p>
-						<img src="media/renderer_api_001.png"><br>
-						<p>
-							But if we wanted to render this texture with a custom shader and/or to a specific rendertarget,
-							we would only need to add a couple of lines to load the shader, create the rendertarget and assign
-							them to the pipeline:
-						</p>
-						<img src="media/renderer_api_advanced_001.png"><br>
-						<p>
-							And while I was at reworking the renderer API, I also made a change I've been planning on doing for a while which was to
-							allocated the batch buffer in the RAM and upload it to the vertex buffer instead of mapping it from the
-							GPU to the RAM and then uploading it again. (Under the hood - use glSubBufferData instead of glMapBuffer).
-							So with all these new changes I made a stress test for the renderer and managed to to render 100k quads at 60fps.
-							<br>I also fixed the font rendering which works way better with the new API. Here's the result:
-						</p>
-						<iframe src="https://www.youtube.com/embed/w3gj0DWNbsI" width="640" height="480"></iframe><br>
-						<p>
-							The Wizzy GitHub Repository can be found <a class="link" href="https://github.com/N00TN00T/Wizzy">here</a>.
-						</p>
-						
+							I was playing around with the 2D renderer and wanted to use different shaders on
+							different objects in the scene while also rendering them to different RenderTargets. 
+							The shader was set in Renderer2D::Begin(), while the RenderTarget was used as a handle to 
+							a batch in the renderer so it had to be passed in every Renderer2D function. Altough every 
+							combination of shader and rendertarget needs to be its own batch, the api can be improved to
+							make things easier. So, I decided to create a Pipeline struct that will keep track of its own batch
+							and lets the user customize it by setting its shader, rendertarget, viewmatrix etc. The final version ended
+							up looking like this:</p>
+							<img src="media/rendererpipeline_001.png"><br>
+							<p>
+							I decided to make it a subclass and friend of Renderer2D. This way I can hide things from the user,
+							like the vertexbuffer and vertexarray, but still exposing it to Renderer2D. This will make for a pretty
+							clean API where the type is Renderer2D::Pipeline, which will let me make a Renderer::Pipeline
+							type for when I'll implemented 3D rendering. Now, instead of taking in the shader in Renderer2D::Begin()
+							and the rendertarget in every Renderer2D function call, the API looks more like this:</p>
+							<img src="media/new_renderer_api_001.png"><br>
+							<p>
+								Here's what the code would look like to load a texture and render it to the screen:
+							</p>
+							<img src="media/renderer_api_001.png"><br>
+							<p>
+								But if we wanted to render this texture with a custom shader and/or to a specific rendertarget,
+								we would only need to add a couple of lines to load the shader, create the rendertarget and assign
+								them to the pipeline:
+							</p>
+							<img src="media/renderer_api_advanced_001.png"><br>
+							<p>
+								And while I was at reworking the renderer API, I also made a change I've been planning on doing for a while which was to
+								allocated the batch buffer in the RAM and upload it to the vertex buffer instead of mapping it from the
+								GPU to the RAM and then uploading it again. (Under the hood - use glSubBufferData instead of glMapBuffer).
+								So with all these new changes I made a stress test for the renderer and managed to to render 100k quads at 60fps.
+								<br>I also fixed the font rendering which works way better with the new API. Here's the result:
+							</p>
+							<iframe src="https://www.youtube.com/embed/w3gj0DWNbsI" width="640" height="480"></iframe><br>
+							<p>
+								The Wizzy GitHub Repository can be found <a class="link" href="https://github.com/N00TN00T/Wizzy">here</a>.
+							</p>
+					</div>
 				</div>
 			</div>
 		</div>
