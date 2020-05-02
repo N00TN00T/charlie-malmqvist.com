@@ -132,7 +132,7 @@ nav .navitem:hover {
 {
 	margin: 0 auto;
 	display: block;
-	width: 100%;
+	width: 1em;
 }
 
 .article-item p
