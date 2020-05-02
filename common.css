@@ -134,7 +134,7 @@ nav .navitem:hover {
 	display: block;
 
 	width: 50%;
-	height: auto;
+	/*height: auto;*/
 }
 
 .article-item p
