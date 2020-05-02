@@ -10,7 +10,9 @@ for (var i = 0; i < toDelete.length; i++) {
 }
 var filename = segments[segments.length - 1];
 
+var filenameraw = filename.split('.')[0];
+
 $(function(){ $(".nav_top").load("nav.html"); });
 
-console.log(filename)
-document.getElementById(filename).classList.add("nav-current");
+console.log(filenameraw);
+document.getElementById(filenameraw).classList.add("nav-current");
