@@ -119,7 +119,11 @@ nav .navitem:hover {
 	padding-bottom: 8%;
 	
 }
-
+.image-caption
+{
+	text-align: center;
+	font-size: 0.9em;
+}
 .article-item
 {
 	margin: 0 auto;
