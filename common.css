@@ -107,17 +107,12 @@ nav #current
 .article-section
 {
     
-    /*background-color: rgba(255, 255, 255, 0.39);*/
+    background-color: rgba(255, 255, 255, 1.0);
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 2%;
 	padding-bottom: 2%;
 	
-}
-
-.article-section * 
-{
-	margin: 0 auto;
 }
 
 .article-content
