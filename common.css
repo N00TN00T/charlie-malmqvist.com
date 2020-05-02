@@ -176,7 +176,9 @@ img {
     transition:transform 0.25s ease;
 }
 img:active {
-    -webkit-transform:scale(1.8);
+	-webkit-transform:scale(1.8);
+	animation: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	-webkit-animation: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 	transform:scale(1.8);
 }
 
