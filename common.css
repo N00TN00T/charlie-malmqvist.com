@@ -149,6 +149,10 @@ nav #current
 {
 	margin: 0 auto;
 	display: block;
+}
+
+.article-item p
+{
 	padding: 1%;
 }
 
