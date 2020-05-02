@@ -161,7 +161,7 @@ nav .navitem:hover {
 
 .toc-section
 {
-    padding: 0.5% 1% 1% 20px;
+    padding: 0.5% 1% 1% 1%;
     width: 20em;
     background-color: rgb(80, 10, 200);
     margin: auto;
