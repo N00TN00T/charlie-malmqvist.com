@@ -52,7 +52,6 @@ nav {
 	text-align: center;
 	width: 50vw;
 	margin: auto;
-	background-color: white;
 }
 nav .navitem
 {
@@ -61,18 +60,13 @@ nav .navitem
 	padding: 0;
 	overflow: hidden;
 	background-color: #333333;
+	float: right;
 }
 nav .nav-current
 {
 	background-color: green;
 	text-decoration: underline;
 	text-decoration-color: white;
-}
-
-nav .navitem
-{
-	float: left;
-	display: block;
 }
 
 
