@@ -76,6 +76,10 @@ nav .nav-current
 	text-decoration-color: white;
 }
 
+a
+{
+	font-size: 1em;
+}
 
 nav a {
 	
