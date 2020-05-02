@@ -7,21 +7,25 @@
 /* unvisited link */
  a:link.link {
 	color: rgb(50, 190, 70);
+	display: inline-block;
   }
   
   /* visited link */
   a:visited.link {
 	color: rgb(50, 190, 70);
+	display: inline-block;
   }
   
   /* mouse over link */
   a:hover.link {
 	color: hotpink;
+	display: inline-block;
   }
   
   /* selected link */
   a:active.link {
 	color: blue;
+	display: inline-block;
   } 
 
 body {
