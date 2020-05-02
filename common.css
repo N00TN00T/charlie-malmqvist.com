@@ -145,16 +145,16 @@ nav #current
 	
 }
 
-.article-item *
+.article-item *:not(li)
 {
 	/*margin: 0 auto;
 	display: block;*/
+	padding-top: 3%;
 }
 
 .article-item p
 {
-	padding-top: 3%;
-	padding-bottom: 2%;
+	
 }
 
 .article-item ul, .article-item li
