@@ -13,14 +13,25 @@ var filename = segments[segments.length - 1];
 
 var filenameraw = filename.split('.')[0];
 
+function setCurrent()
+{
+    console.log(filenameraw);
+    var e = document.getElementById(filenameraw);
+
+    if (e != null)
+    {
+        e.classList.add("nav-current")
+    }
+    else 
+    {
+        setTimeout(function(){
+            setCurrent();
+        }, 10);
+    }
+}
+
 $(function(){ 
-    console.log("hi")
     $(".nav_top").load("nav.html"); 
 
-    console.log(filenameraw);
-    document.getElementById("hi").classList.add("nav-current");
+    setCurrent();
 });
-$(window).on('load', function()
-{
-    
-})
