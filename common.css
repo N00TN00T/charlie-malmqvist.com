@@ -42,6 +42,7 @@ nav {
 {
 	background-color: green;
 	text-decoration: underline;
+	text-decoration-color: white;
 }
 nav .navitem
 {
