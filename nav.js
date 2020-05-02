@@ -24,9 +24,10 @@ function setCurrent()
     }
     else 
     {
+        console.log("retry")
         setTimeout(function(){
             setCurrent();
-        }, 10);
+        }, 1);
     }
 }
 
