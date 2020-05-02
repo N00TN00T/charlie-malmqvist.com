@@ -159,8 +159,7 @@ nav #current
 
 .article-item ul, .article-item li
 {
-	text-decoration: unset;
-	display: inline-block;
+	list-style: square outside;
 }
 
 .article-content h1
