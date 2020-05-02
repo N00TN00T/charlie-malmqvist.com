@@ -38,12 +38,6 @@ nav {
 	text-align: center;
 	
 }
-.nav-current
-{
-	background-color: green;
-	text-decoration: underline;
-	text-decoration-color: white;
-}
 nav .navitem
 {
 	list-style-type: none;
@@ -51,6 +45,12 @@ nav .navitem
 	padding: 0;
 	overflow: hidden;
 	background-color: #333333;
+}
+nav .nav-current
+{
+	background-color: green;
+	text-decoration: underline;
+	text-decoration-color: white;
 }
 
 nav .navitem
