@@ -143,6 +143,7 @@ nav #current
 {
 	padding: 0%;
 	width: 75%;
+	text-decoration: unset;
 }
 
 .article-content h1
