@@ -31,10 +31,10 @@
 							to try out using custom shading with the fresh pipeline API 
 							(see earlier post <a class="link" href="#new-wizzy-2d-renderer">New Wizzy 2D Renderer</a>).
 							While thinking of ideas for what visual effect to add, I realized that there is a pretty big limitation
-							for our renderer. Since we're rendering it batches, we use an attribute layout to pass data per object per vertex,
-							and we don't have any way to add to this layout; there is no way to send custom data per object. This is something
+							for the renderer. Since it's rendering it batches, it needs to use an attribute layout to pass data per object per vertex,
+							and doesn't have any way to add to this layout; there is no way to send custom data per object. This is something
 							for me to solve in the future so I decided to just implement some simple 2D lighting. Light data is consistent
-							for all objects, so we can just upload it in uniforms each frame before rendering.
+							for all objects, so it can just be uploaded in uniforms each frame before rendering.
 						</p>
 
 						<p>
@@ -205,8 +205,8 @@ m_systems.AddSystem&lt;LightSystem>();
 						</p>
 						<iframe src="https://youtube.com/embed/lRE1LHMQV-U" width="640" height="480"></iframe>
 						<p>
-							This would slow down the application quite a bit with several lights since we are
-							making separate calls for every piece of data we upload to the shader. A big 
+							This would slow down the application quite a bit with several lights since it's
+							making separate calls for every piece of data uploaded to the shader. A big 
 							optimization here would be to use uniform buffers. This is however not something 
 							I've implemented in the rendering yet but it will be in the near future.
 						</p>
