@@ -195,13 +195,19 @@ m_systems.AddSystem&lt;LightSystem>();
 							</pre>
 						</div>
 						<p>
-							The background seen is this one that I threw together using the wizzy logo:
+							The blue background is very underwhelming so I decided to use this one that I threw together using the wizzy logo:
 						</p>
 						<img src="media/demo_game_background.png">
 						<p>
 							With all this done, I got a very pleasing result and a pretty sweet upgrade to the game. Here's a sample:
 						</p>
 						<iframe src="https://youtube.com/embed/lRE1LHMQV-U" width="640" height="480"></iframe>
+						<p>
+							This would slow down the application quite a bit with several lights since we are
+							making separate calls for every piece of data we upload to the shader. A big 
+							optimization here would be to use uniform buffers. This is however not something 
+							I've implemented in the rendering yet but it will be in the near future.
+						</p>
 						<p>
 							The Wizzy GitHub Repository can be found <a class="link" href="https://github.com/N00TN00T/Wizzy">here</a>.
 						</p>
