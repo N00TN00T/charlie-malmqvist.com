@@ -27,6 +27,52 @@
 							custom shaders and make it more interesting visually. This was also a good opportunity
 							to try out using custom shading with the fresh pipeline API 
 							(see earlier post <a class="link" href="#new-wizzy-2d-renderer">New Wizzy 2D Renderer</a>).
+							While thinking of ideas for what visual effect to add, I realized that there is a pretty big limitation
+							for our renderer. Since we're rendering it batches, we use an attribute layout to pass data per object per vertex,
+							and we don't have any way to add to this layout; there is no way to send custom data per object. This is something
+							for me to solve in the future so I decided to just implement some simple 2D lighting. Light data is consistent
+							for all objects, so we can just upload it in uniforms each frame before rendering.
+						</p>
+
+						<p>
+							To achieve simple 2D lighting there were a few things I needed to do: Write a custom shader, Load the shader and upload light data every frame.
+						</p>
+						<h3>The Shader</h3>
+						<p>
+							To write the shader I started of with a basic template 2D shader (found 
+							<a href="Wizzy/texture2d.wzsdr">here</a>) which is just the same as the default
+							Renderer2D fallback shader that is used when no custom shader is specified. Implementing
+							lighting was not a whole lot of work. Basically all I needed was a light position and from there
+							I could calculate the distance between the vertex and light position and determine the strength of its color.
+							This, plus some properties to make it more interesting, was implemented with just a few lines.<br>
+							I set the uniforms in the vertex shader:
+							<pre>
+								<code>
+uniform float u_ambient = 0.1;
+uniform vec2 u_lightPos;
+uniform vec4 u_lightColor = vec4(1.0, 1.0, 1.0, 1.0);
+uniform float u_intensity = 1.0;
+uniform float u_radius = 300.f;
+								</code>
+							</pre>
+							<br>
+							And use them to calculate the color in the fragment shader:
+							<pre>
+								<code>
+void main() {
+
+	float distRatio = 1.0 - (length(lightPos - position) / (radius * 2.0));
+
+	// Set the light color based on distance & intensity (with a minimum of ambient)
+	fragColor = max(distRatio * lightColor * intensity, vec4(vec3(ambient), 1.0));
+
+	vec4 textureColor = texture(u_textures[int(round(location))], uv);
+
+	// Apply texture color
+	fragColor *= color * textureColor;
+}
+								</code>
+							</pre>
 						</p>
 
 						
