@@ -99,10 +99,10 @@ nav .navitem:hover {
 
 div .code
 {
-	background-color: #111111;
+	border-color: #111111;
 	border-radius: 1%;
 	border-style: solid;
-	border-color: #333333;
+	background-color: #333333;
 }
 
 .code pre
