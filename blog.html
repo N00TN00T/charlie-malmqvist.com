@@ -82,7 +82,98 @@ void main() {
 							</div>
 						</p>
 
-						
+						<p>
+							With the shader code done, I made sure to load it on initialization and assign it in the main pipeline:
+							<div class="code">
+								<pre class="prettyprint">
+									<code>
+g_mainPipeline->hShader = wz::ResourceManagement::Load<wz::Shader>("DemoGame/simple_light.wzsdr");
+									</code>
+								</pre>
+							</div>
+
+							To integrate this with the ecs system, I needed a new component and system. I already have the 
+							<pre class="prettyprint">Position</pre> and <pre class="prettyprint">ColorTint</pre> component
+							defined from before (used for systems SpriteRenderer, TextRenderer etc), so I only defined one
+							new component called <pre class="prettyprint">LightConfig</pre> to hold the extra light data
+							and tag the entity so its data is processed by the light system. Here's the 
+							<pre class="prettyprint">LightConfig</pre> component:
+							<div class="code">
+								<pre class="prettyprint">
+									<code>
+// A macro I use to define components - entirely a personal preference
+#define COMPONENT_DEF(t) struct t : public wz::Component<t>
+
+COMPONENT_DEF(LightConfig)
+{
+	float intensity = 1.f;
+	float ambient = .1f;
+	float radius = 100.f;
+};
+									</code>
+								</pre>
+							</div>
+							And here's the system:
+							<div class="code">
+								<pre class="prettyprint">
+									<code>
+class LightSystem : public wz::System
+{
+public:
+    LightSystem()
+    {
+        AddComponentType<Position>();
+        AddComponentType<LightConfig>();
+        AddComponentType<ColorTint>(component_flag_optional);
+
+        Subscribe(wz::EventType::app_update);
+
+    }
+	void OnEvent(const wz::Event& e, wz::ComponentGroup& components) const
+	{
+		auto& position = *components.Get&lt;Position>();
+		auto& lightConfig = *components.Get&lt;LightConfig>();
+
+		const wz::Color& color = components.Has&lt;ColorTint>()
+								? components.Get&lt;ColorTint>()->value
+								: wz::Color::white;
+
+		switch (e.GetEventType())
+		{
+			case wz::EventType::app_update:
+			{
+				position.value = wz::Input::GetMousePos();
+
+				if (wz::ResourceManagement::IsLoaded(g_mainPipeline->hShader))
+				{
+					auto& shader = wz::ResourceManagement::Get&lt;wz::Shader>(g_mainPipeline->hShader);
+
+					shader.Upload1f("u_ambient", lightConfig.ambient);
+					shader.Upload2f("u_lightPos", position.value);
+					shader.Upload4f("u_lightColor", color);
+					shader.Upload1f("u_intensity", lightConfig.intensity);
+					shader.Upload1f("u_radius", lightConfig.radius);
+				}
+
+				ImGui::Begin("Game Debugging");
+
+				ImGui::SliderFloat("Ambient Strength", &lightConfig.ambient, 0.f, .9f);
+				if (components.Has&lt;ColorTint>())
+					ImGui::ColorEdit4("Light color", components.Get&lt;ColorTint>()->value.rgba);
+				ImGui::DragFloat("Intensity", &lightConfig.intensity, .01f, .0f, 100.f);
+				ImGui::DragFloat("Radius", &lightConfig.radius, .1f, .0f, 10000.f);
+
+				ImGui::End();
+
+				return;
+			}
+		}
+	}
+};
+									</code>
+								</pre>
+							</div>
+						</p>
 						
 						<p>
 							The Wizzy GitHub Repository can be found <a class="link" href="https://github.com/N00TN00T/Wizzy">here</a>.
