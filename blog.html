@@ -145,6 +145,7 @@ public:
 		{
 			case wz::EventType::app_update:
 			{
+				// Follow the mouse position
 				position.value = wz::Input::GetMousePos();
 
 				if (wz::ResourceManagement::IsLoaded(g_mainPipeline->hShader))
@@ -186,12 +187,21 @@ public:
 							<pre class="prettyprint">
 								<code>
 auto e = m_ecs.CreateEntity&lt;LightConfig, Position, ColorTint>();
+// Set default value of the color
 m_ecs.GetComponent&lt;ColorTint>(e)->value = wz::Color::white;
 
 m_systems.AddSystem&lt;LightSystem>();
 								</code>
 							</pre>
 						</div>
+						<p>
+							The background seen is this one that I threw together using the wizzy logo:
+						</p>
+						<img src="media/demo_game_background.png">
+						<p>
+							With all this done, I got a very pleasing result and a sweet upgrade to the game. Here's a sample:
+						</p>
+						<iframe src="https://youtube.com/embed/lRE1LHMQV-U"></iframe>
 						<p>
 							The Wizzy GitHub Repository can be found <a class="link" href="https://github.com/N00TN00T/Wizzy">here</a>.
 						</p>
