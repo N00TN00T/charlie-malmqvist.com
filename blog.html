@@ -83,7 +83,7 @@ void main() {
 						</p>
 
 						<p>
-							With the shader code done, I made sure to load it on initialization and assign it in the main pipeline:
+							With the shader code done, I made sure to load it on initialization and assign it in the main pipeline in App Init():
 							<div class="code">
 								<pre class="prettyprint">
 									<code>
@@ -93,11 +93,11 @@ g_mainPipeline->hShader = wz::ResourceManagement::Load<wz::Shader>("DemoGame/sim
 							</div>
 
 							To integrate this with the ecs system, I needed a new component and system. I already have the 
-							<pre class="prettyprint">Position</pre> and <pre class="prettyprint">ColorTint</pre> component
-							defined from before (used for systems SpriteRenderer, TextRenderer etc), so I only defined one
-							new component called <pre class="prettyprint">LightConfig</pre> to hold the extra light data
+							<i>Position</i> and <i>ColorTint</i> component
+							defined from before (used for systems <i>SpriteRenderer</i>, <i>TextRenderer</i> etc), so I only defined one
+							new component called <i>LightConfig</i> to hold the extra light data
 							and tag the entity so its data is processed by the light system. Here's the 
-							<pre class="prettyprint">LightConfig</pre> component:
+							<i>LightConfig</i> component:
 						</p>
 							<div class="code">
 								<pre class="prettyprint">
@@ -151,6 +151,7 @@ public:
 				{
 					auto& shader = wz::ResourceManagement::Get&lt;wz::Shader>(g_mainPipeline->hShader);
 
+					// Upload the light properties to the shader properties
 					shader.Upload1f("u_ambient", lightConfig.ambient);
 					shader.Upload2f("u_lightPos", position.value);
 					shader.Upload4f("u_lightColor", color);
@@ -158,6 +159,7 @@ public:
 					shader.Upload1f("u_radius", lightConfig.radius);
 				}
 
+				// Do some gui so the color properties can be modified in realtime
 				ImGui::Begin("Game Debugging");
 
 				ImGui::SliderFloat("Ambient Strength", &lightConfig.ambient, 0.f, .9f);
@@ -177,9 +179,19 @@ public:
 								</pre>
 							</div>
 						<p>
-							
+							Then I just had to create an entity with a <i>Position</i>, <i>ColorTint</i> and <i>LightConfig</i>
+							and register the system in App Init():
 						</p>
-						
+						<div class="code">
+							<pre class="prettyprint">
+								<code>
+auto e = m_ecs.CreateEntity&lt;LightConfig, Position, ColorTint>();
+m_ecs.GetComponent&lt;ColorTint>(e)->value = wz::Color::white;
+
+m_systems.AddSystem&lt;LightSystem>();
+								</code>
+							</pre>
+						</div>
 						<p>
 							The Wizzy GitHub Repository can be found <a class="link" href="https://github.com/N00TN00T/Wizzy">here</a>.
 						</p>
