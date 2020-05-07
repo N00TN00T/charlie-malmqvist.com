@@ -49,7 +49,7 @@
 							I could calculate the distance between the vertex and light position and determine the strength of its color.
 							This, plus some properties to make it more interesting, was implemented with just a few lines.<br>
 							I set the uniforms in the vertex shader:
-							<div>
+							<div class="code">
 								<pre class="prettyprint">
 									<code>
 uniform float u_ambient = 0.1;
@@ -62,7 +62,7 @@ uniform float u_radius = 300.f;
 							</div>
 							<br>
 							And use them to calculate the color based on the distance in the fragment shader:
-							<div class="prettyprint">
+							<div class="code">
 								<pre class="prettyprint">
 									<code>
 void main() {
