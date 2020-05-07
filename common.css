@@ -97,6 +97,11 @@ nav .navitem:hover {
 	background-color: #111111;
 }
 
+pre code
+{
+	background-color: #111111;
+}
+
 .video
 {
 	display: block;
