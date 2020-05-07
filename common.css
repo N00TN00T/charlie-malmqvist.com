@@ -1,4 +1,4 @@
-*:not(code) {
+* {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	font-size: 100%;
 }
@@ -110,6 +110,11 @@ div .code
 .code pre
 {
 	padding-left: 1%;
+}
+
+.article-item .code pre code
+{
+	font-family: 'Courier New', Courier, monospace;
 }
 
 .video
