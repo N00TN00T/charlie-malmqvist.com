@@ -46,19 +46,22 @@
 							I could calculate the distance between the vertex and light position and determine the strength of its color.
 							This, plus some properties to make it more interesting, was implemented with just a few lines.<br>
 							I set the uniforms in the vertex shader:
-							<pre>
-								<code>
+							<div class="code">
+								<pre>
+									<code>
 uniform float u_ambient = 0.1;
 uniform vec2 u_lightPos;
 uniform vec4 u_lightColor = vec4(1.0, 1.0, 1.0, 1.0);
 uniform float u_intensity = 1.0;
 uniform float u_radius = 300.f;
-								</code>
-							</pre>
+									</code>
+								</pre>
+							</div>
 							<br>
 							And use them to calculate the color in the fragment shader:
-							<pre>
-								<code>
+							<div class="code">
+								<pre>
+									<code>
 void main() {
 
 	float distRatio = 1.0 - (length(lightPos - position) / (radius * 2.0));
@@ -71,8 +74,9 @@ void main() {
 	// Apply texture color
 	fragColor *= color * textureColor;
 }
-								</code>
-							</pre>
+									</code>
+								</pre>
+							</div>
 						</p>
 
 						
