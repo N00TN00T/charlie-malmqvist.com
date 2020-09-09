@@ -105,7 +105,7 @@ g_mainPipeline->hShader = wz::ResourceManagement::Load<wz::Shader>("DemoGame/sim
 								<pre class="prettyprint">
 									<code>
 // A macro I use to define components - entirely a personal preference
-#define COMPONENT_DEF(t) struct t : public wz::Component<t>
+#define COMPONENT_DEF(t) struct t : public wz::Component&lt;t>
 
 COMPONENT_DEF(LightConfig)
 {
