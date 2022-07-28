@@ -127,9 +127,9 @@ class LightSystem : public wz::System
 public:
     LightSystem()
     {
-        AddComponentType<Position>();
-        AddComponentType<LightConfig>();
-        AddComponentType<ColorTint>(component_flag_optional);
+        AddComponentType&lt;Position>();
+        AddComponentType&lt;LightConfig>();
+        AddComponentType&lt;ColorTint>(component_flag_optional);
 
         Subscribe(wz::EventType::app_update);
 

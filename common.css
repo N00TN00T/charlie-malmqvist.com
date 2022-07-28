@@ -155,6 +155,11 @@ div .code
 	width: 75%;	
 }
 
+.article-paragraph
+{
+	margin-left: 5%;
+}
+
 .article-item img, .article-item iframe
 {
 	margin: auto;
