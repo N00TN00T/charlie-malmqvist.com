@@ -105,12 +105,18 @@ div .code
 	border-radius: 1%;
 	border-style: solid;
 	background-color: #333;
+	
+	overflow: hidden;
+	width:100%;
+	text-overflow: ellipsis;
 }
 
 .code pre
 {
 	padding-left: 1%;
+	
 }
+
 
 .article-item .code pre code
 {
@@ -145,7 +151,7 @@ div .code
 	font-size: 0.9em;
 	margin: auto;
 	display: block;
-	padding-top: 0.5%;
+	padding-bottom: 2%;
 }
 .article-item
 {

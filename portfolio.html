@@ -79,21 +79,83 @@
 							<div class="article-paragraph">
 								<h3>Runtime 2D editor</h3>
 								<img src="media/editor.gif" style="width: 100%;">
+								<p class="image-caption">Responisve & featureful editor</p>
 
 								<h3>Full customizability</h3>
 								<img src="media/customize.gif" style="width: 100%;">
+								<p class="image-caption">Let everything be customized by the user</p>
 
-								<h3>Ecs (flecs)</h3>
+								<h3>Ecs (entt)</h3>
 								<img src="media/ecs.gif" style="width: 100%;">
+								<p class="image-caption">Ultra-fast entity-component system with entt, fully interactable in runetime</p>
 
 								<h3>2D physics (box2d)</h3>
 								<img src="media/2dphysics.gif" style="width: 100%;">
+								<p class="image-caption">Realistic and customizable physics for all 2D shapes</p>
 								
 								<h3>Sprite sheet animation</h3>
 								<img src="media/2dsheetanim.gif" style="width: 100%;">
+								<p class="image-caption">Easily animate sprites using sprite sheets</p>
+
+								<h3>Runtime native c++ compiling (w/ language extensions)</h3>
+								<div class="code">
+									<pre class="prettyprint">
+										<code>
+tag(component)
+struct BallMovement {
+	tag(property)
+	f32 hforce = 13000;
+	tag(property)
+	f32 jump_force = 10000;
+};
+
+tag(component)
+struct WASDMovement {
+	tag(property)
+	float move_speed = 1000.f;
+};
+										</code>
+									</pre>
+								</div>
+								<p class="image-caption">Define components for the ecs</p>
+								<div class="code">
+									<pre class="prettyprint">
+										<code>
+reg.view&lt;BallMovement, PhysicsBody2D>().each([delta, &reg](BallMovement& movement, PhysicsBody2D& body) {
+	if (game_input()->is_key_down(AP_KEY_A)) {
+		body.apply_force(fvec2(-movement.hforce * delta, 0));
+	} else if (game_input()->is_key_down(AP_KEY_D)) {
+		body.apply_force(fvec2(movement.hforce * delta, 0));
+	}
+
+	if (game_input()->is_key_pressed(AP_KEY_W)) {
+		body.apply_force(fvec2(0, movement.jump_force));
+	}
+});
+
+reg.view&lt;WASDMovement, Transform2D>().each([delta](WASDMovement& movement, Transform2D& transform) {
+	if (game_input()->is_key_down(AP_KEY_W)) {
+		transform.position += fvec2(0, 1) * movement.move_speed * delta;
+	}
+	if (game_input()->is_key_down(AP_KEY_A)) {
+		transform.position += fvec2(-1, 0) * movement.move_speed * delta;
+	}
+	if (game_input()->is_key_down(AP_KEY_S)) {
+		transform.position += fvec2(0, -1) * movement.move_speed * delta;
+	}
+	if (game_input()->is_key_down(AP_KEY_D)) {
+		transform.position += fvec2(1, 0) * movement.move_speed * delta;
+	}
+});
+										</code>
+									</pre>
+								</div>
+								<p class="image-caption">Real code. Slight language extensions with a built in parser 
+														 (For example <code>tag(component)</code>. All modules have access to all other modules thus access to all parts of the game engine. Simply recompile your module and reload it in the editor.</p>
+
 							</div>
 
-							The project can be found in a <a class="link" href="https://github.com/asbott/Apparatus">github repository</a>.
+							<p>The project can be found in a <a class="link" href="https://github.com/asbott/Apparatus">github repository</a>.</p>
 						</p>
 					</div>
 
