@@ -121,32 +121,40 @@ struct WASDMovement {
 								<div class="code">
 									<pre class="prettyprint">
 										<code>
-reg.view&lt;BallMovement, PhysicsBody2D>().each([delta, &reg](BallMovement& movement, PhysicsBody2D& body) {
-	if (game_input()->is_key_down(AP_KEY_A)) {
-		body.apply_force(fvec2(-movement.hforce * delta, 0));
-	} else if (game_input()->is_key_down(AP_KEY_D)) {
-		body.apply_force(fvec2(movement.hforce * delta, 0));
-	}
+module_function(void) on_update(float delta) {
 
-	if (game_input()->is_key_pressed(AP_KEY_W)) {
-		body.apply_force(fvec2(0, movement.jump_force));
-	}
-});
+	// Get the active entity registry
+	auto& reg = get_entity_registry();
 
-reg.view&lt;WASDMovement, Transform2D>().each([delta](WASDMovement& movement, Transform2D& transform) {
-	if (game_input()->is_key_down(AP_KEY_W)) {
-		transform.position += fvec2(0, 1) * movement.move_speed * delta;
-	}
-	if (game_input()->is_key_down(AP_KEY_A)) {
-		transform.position += fvec2(-1, 0) * movement.move_speed * delta;
-	}
-	if (game_input()->is_key_down(AP_KEY_S)) {
-		transform.position += fvec2(0, -1) * movement.move_speed * delta;
-	}
-	if (game_input()->is_key_down(AP_KEY_D)) {
-		transform.position += fvec2(1, 0) * movement.move_speed * delta;
-	}
-});
+	// Iterate entities with a BallMovement and PhysicsBody2D components
+	reg.view&lt;BallMovement, PhysicsBody2D>().each([delta, &reg](BallMovement& movement, PhysicsBody2D& body) {
+		if (game_input()->is_key_down(AP_KEY_A)) {
+			body.apply_force(fvec2(-movement.hforce * delta, 0));
+		} else if (game_input()->is_key_down(AP_KEY_D)) {
+			body.apply_force(fvec2(movement.hforce * delta, 0));
+		}
+
+		if (game_input()->is_key_pressed(AP_KEY_W)) {
+			body.apply_force(fvec2(0, movement.jump_force));
+		}
+	});
+
+	// Iterate entities with a WASDMovement and Transform2D components
+	reg.view&lt;WASDMovement, Transform2D>().each([delta](WASDMovement& movement, Transform2D& transform) {
+		if (game_input()->is_key_down(AP_KEY_W)) {
+			transform.position += fvec2(0, 1) * movement.move_speed * delta;
+		}
+		if (game_input()->is_key_down(AP_KEY_A)) {
+			transform.position += fvec2(-1, 0) * movement.move_speed * delta;
+		}
+		if (game_input()->is_key_down(AP_KEY_S)) {
+			transform.position += fvec2(0, -1) * movement.move_speed * delta;
+		}
+		if (game_input()->is_key_down(AP_KEY_D)) {
+			transform.position += fvec2(1, 0) * movement.move_speed * delta;
+		}
+	});
+}
 										</code>
 									</pre>
 								</div>
