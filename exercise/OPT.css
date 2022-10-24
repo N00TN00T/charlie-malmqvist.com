@@ -36,19 +36,12 @@ html {
 #img-bottle {
     
 
-    
+    width: 300px;
 }
 
 #img-molecule {
-    display: inline-block;
+    display:inline-block;
     width: 360px;
-}
-
-#img-one {
-    text-align: left;
-}
-#img-two {
-    
 }
 
 #bullet-list {
