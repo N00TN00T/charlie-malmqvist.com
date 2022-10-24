@@ -34,10 +34,14 @@ html {
 }
 
 #img-bottle {
-    float: right;
+    
 
-    padding-left: 10%;
-    padding-bottom: 20%;
+    
+}
+
+#img-molecule {
+    display: inline;
+    width: 50%;
 }
 
 #bullet-list {
