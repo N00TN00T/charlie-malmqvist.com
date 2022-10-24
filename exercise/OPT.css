@@ -1,0 +1,56 @@
+
+
+html {
+    background-color: rgb(110, 99, 202);
+
+    color: rgb(183, 199, 170);
+}
+
+.section {
+    padding-left: 10%;
+    padding-right: 8%;
+
+    
+}
+
+#headline {
+       
+}
+
+#headline-div {
+    margin-top: 5%;
+
+    float: left;
+}
+
+#headline-div p {
+    font-weight: bold;
+    font-size: large;
+    text-decoration: underline;
+}
+
+#img-bottle {
+    float: right;
+
+    padding-left: 10%;
+}
+
+#bullet-list {
+    color: rgb(188, 235, 149);
+}
+
+li {
+    padding-top: 1%;
+}
+
+.button {
+    text-align: center;
+    
+}
+
+.button button {
+    padding: 1% 1% 1% 1%;
+    color: rgb(0, 0, 0);
+    
+    background-color: rgb(188, 235, 149);
+}
