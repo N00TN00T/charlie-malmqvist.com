@@ -34,6 +34,7 @@ html {
     float: right;
 
     padding-left: 10%;
+    padding-bottom: 20%;
 }
 
 #bullet-list {
@@ -54,6 +55,7 @@ li {
 
     margin-left: 10%;
     margin-right: 10%;
+    padding-bottom: 5%;
 }
 
 .button button {
