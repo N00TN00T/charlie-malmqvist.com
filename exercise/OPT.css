@@ -40,8 +40,15 @@ html {
 }
 
 #img-molecule {
-    display: inline;
-    width: 50%;
+    display: inline-block;
+    width: 360px;
+}
+
+#img-one {
+    text-align: left;
+}
+#img-two {
+    
 }
 
 #bullet-list {
