@@ -45,6 +45,19 @@ html {
     margin-right: 5%;
 }
 
+#img-doctor {
+    width: 150px; 
+    
+    margin-top: 5%;
+
+    margin-left: 40%;
+    width: 20%;
+}
+
+.img-caption {
+    text-align: center;
+}
+
 #bullet-list {
     color: rgb(234, 255, 236);
 }
