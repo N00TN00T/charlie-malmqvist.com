@@ -64,3 +64,12 @@ li {
     
     background-color: rgb(188, 235, 149);
 }
+
+.section p {
+    font-weight: bold;
+}
+
+.center-align {
+    text-align: center;
+    text-decoration:underline;
+}
