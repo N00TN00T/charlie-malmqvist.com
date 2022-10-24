@@ -29,9 +29,8 @@ html {
 }
 
 #headline-div p {
-    font-weight: bold;
+    font-style: italic;
     font-size: large;
-    text-decoration: underline;
 }
 
 #img-bottle {
