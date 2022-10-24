@@ -1,12 +1,16 @@
 
 
 html {
-    background-color: rgb(110, 99, 202);
+    background-color: rgb(175, 175, 175);
 
-    color: rgb(183, 199, 170);
+    color: rgb(227, 250, 235);
 
     display: flex;
     justify-content: center;
+
+    background-image: url('creativity.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .section {
@@ -38,7 +42,7 @@ html {
 }
 
 #bullet-list {
-    color: rgb(188, 235, 149);
+    color: rgb(234, 255, 236);
 }
 
 li {
@@ -51,7 +55,7 @@ li {
 }
 
 #form {
-    background-color: rgb(84, 72, 192);
+    background-color: rgba(0, 0, 0, 0.575);
 
     margin-left: 20%;
     margin-right: 20%;
