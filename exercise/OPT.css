@@ -4,11 +4,14 @@ html {
     background-color: rgb(110, 99, 202);
 
     color: rgb(183, 199, 170);
+
+    display: flex;
+    justify-content: center;
 }
 
 .section {
-    padding-left: 10%;
-    padding-right: 8%;
+    padding-left: 5%;
+    padding-right: 5%;
 
     
 }
@@ -18,8 +21,6 @@ html {
 }
 
 #headline-div {
-    margin-top: 5%;
-
     float: left;
 }
 
@@ -46,6 +47,13 @@ li {
 .button {
     text-align: center;
     
+}
+
+#form {
+    background-color: rgb(84, 72, 192);
+
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .button button {
